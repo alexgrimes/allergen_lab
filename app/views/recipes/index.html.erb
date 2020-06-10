@@ -1,0 +1,4 @@
+<h1>Recipes</h1>
+<% @sorted_recipes.each do |recipe| %>
+  <p><%= link_to recipe.dish_name, recipe_path(recipe) %> - <%= recipe.ingredients.count%></p>
+<% end %>

@@ -1,0 +1,10 @@
+<%= form_for @recipe do |f| %>
+  <%= f.label 'Recipe Name:' %><br>
+  <%= f.text_field :dish_name %><br>
+
+  <%= f.label 'User:' %><br>
+  <%= collection_select(:recipe, :user_id, @users, :id, :name) %>
+ 
+  <%= f.submit "Submit Recipe" %>
+<% end %>
+

@@ -12,8 +12,23 @@ Allergen.destroy_all
 #   Character.create(name: 'Luke', movie: movies.first)
 sam = User.create(name: "Sam")
 alex = User.create(name: "Alex")
+
 grilled_cheese = Recipe.create(dish_name: "Grilled Cheese", user_id: sam.id)
+pizza = Recipe.create(dish_name: "Grilled Cheese", user_id: sam.id)
+
 cheese = Ingredient.create(ingredient_name: "Cheese")
+ham = Ingredient.create(ingredient_name: "Ham")
+onion = Ingredient.create(ingredient_name: "Onion")
+
 dairy = Allergen.create(user_id: sam.id, ingredient_id: cheese.id)
+
 RecipesIngredient.create(ingredient_id: cheese.id, recipe_id: grilled_cheese.id, quantity: 2)
+RecipesIngredient.create(ingredient_id: ham.id, recipe_id: grilled_cheese.id, quantity: 2)
+RecipesIngredient.create(ingredient_id: onion.id, recipe_id: grilled_cheese.id, quantity: 2)
+
+
+RecipesIngredient.create(ingredient_id: cheese.id, recipe_id: grilled_cheese.id, quantity: 2)
+RecipesIngredient.create(ingredient_id: ham.id, recipe_id: grilled_cheese.id, quantity: 2)
+RecipesIngredient.create(ingredient_id: onion.id, recipe_id: grilled_cheese.id, quantity: 2)
+
 
