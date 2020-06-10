@@ -1,0 +1,11 @@
+<h1><%= @user.name %></h1>
+
+<h3>Recipes</h3>
+
+<% @recipes.each do |recipe| %>
+  <p><%= recipe.dish_name %></p>
+<% end %>
+
+<%= button_to "DELETE", user_path(@user), method: :delete %>
+
+<%= link_to "HOME", users_path %>
