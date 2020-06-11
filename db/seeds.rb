@@ -25,6 +25,7 @@ onion = Ingredient.create(ingredient_name: "Onion")
 Allergen.create(user_id: sam.id, ingredient_id: cheese.id)
 Allergen.create(user_id: alex.id, ingredient_id: ham.id)
 Allergen.create(user_id: emilio.id, ingredient_id: onion.id)
+Allergen.create(user_id: alex.id, ingredient_id: cheese.id)
 
 # ************** RECIPES-INGREDIENTS (JOIN TABLE) **************
 
